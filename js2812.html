@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>OOP bai tap</title>
+   <h2> Bài tập OOP</h2>
+</head>
+<body>
+
+   <div>
+      <p>Nhập thông số để tạo box:</p>
+      <input type="text" id="text" placeholder="Nhập nội dung"><br>
+      <input type="text" id="chieuDai" placeholder="Nhập chiều dài"><br>
+      <input type="text" id="chieuRong" placeholder="Nhập chiều rộng"><br>
+      <label for="mauNen">Chọn màu nền </label><input type="color" id="mauNen"><br> 
+      <label for="mauChu">Chọn màu chữ </label><input type="color" id="mauChu"><br> 
+      <input type="button" id="enter" value="enter" onclick="createBox()"><br>
+   </div><br>
+
+   <div id="border"></div>
+   
+   <script type="text/javascript">
+      var enter = "<br>";
+
+      function createBox () {
+         var text = document.getElementById("text").value;
+         var dai = document.getElementById("chieuDai").value;
+         var rong = document.getElementById("chieuRong").value;
+         var mauNen = document.getElementById("mauNen").value;
+         var mauChu = document.getElementById("mauChu").value;
+         var style = `background:${mauNen}; height:${dai}px; width:${rong}px; color:${mauChu}; padding:4px; line-height:${dai}px; text-align:center`;  
+         result = `<div id="box1" style= "${style}">  ${text}</div>`;
+         document.getElementById("border").innerHTML = result;
+      }
+   </script><hr>
+   <h3>Thêm thẻ 1</h3>
+</body>
+</html>
